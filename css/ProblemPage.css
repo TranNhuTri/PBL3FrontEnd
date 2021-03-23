@@ -1,0 +1,36 @@
+.ProblemPage {
+  padding: 40px 0;
+}
+
+.ProblemPage .ProblemPage_Header {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+}
+
+.ProblemPage .ListProblemTable {
+  width: 100%;
+  font-size: 14rem;
+  -webkit-box-shadow: 0 0 5px #ccc;
+          box-shadow: 0 0 5px #ccc;
+}
+
+.ProblemPage .ListProblemTable th {
+  padding: 10px;
+  font-weight: 100;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.ProblemPage .ListProblemTable tr:nth-child(even) {
+  background-color: #ccc3;
+}
+
+.ProblemPage .ListProblemTable .Title, .ProblemPage .ListProblemTable .ProblemTitle {
+  text-align: left;
+}
+
+.ProblemPage .ListProblemTable td {
+  padding: 20px 10px;
+  text-align: center;
+}
+/*# sourceMappingURL=ProblemPage.css.map */

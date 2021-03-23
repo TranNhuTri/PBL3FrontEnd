@@ -3,6 +3,7 @@
 }
 
 .AppHeader .AppHeader_Row {
+  padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,12 +21,21 @@
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item {
-  padding: 10px 15px;
+  padding: 5px 15px;
   font-size: 16rem;
-  color: #636363;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Link {
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Text {
+  padding: 5px;
+}
+
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Text .AppHeader_Link {
   text-decoration: none;
   font-size: 16rem;
   color: #636363;
@@ -34,6 +44,7 @@
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_BellIcon, .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_AvarIcon {
   position: relative;
   cursor: pointer;
+  color: #636363;
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_BellIcon .AppHeader_Dropdown {
@@ -79,7 +90,7 @@
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Dropdown .AppHeader_Dropdown_List .AppHeader_Dropdown_Item .AppHeader_Dropdown_Link {
   text-decoration: none;
-  color: #546e7a;
+  color: #636363;
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Dropdown .AppHeader_Dropdown_List .AppHeader_Dropdown_Item .AppHeader_Dropdown_Link .AppHeader_Dropdown_Icon {
@@ -116,4 +127,21 @@
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item:last-child {
   padding-right: 0;
 }
-/*# sourceMappingURL=homePage.css.map */
+
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item:hover .AppHeader_Link {
+  color: black;
+}
+
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item--active .AppHeader_Text {
+  border-bottom: 1px solid #ccc;
+}
+
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item--active .AppHeader_Text .AppHeader_Link {
+  cursor: default;
+  color: #263238;
+}
+
+.list_problem_table {
+  font-size: 20px;
+}
+/*# sourceMappingURL=HomePage.css.map */

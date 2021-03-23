@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="stylesheet" href="./css/Layout.css">
     <link rel="stylesheet" href="./css/HomePage.css">
+    <link rel="stylesheet" href="./css/ProblemPage.css">
 </head>
 <body>
     <div class="AppContainer">
@@ -16,11 +17,15 @@
             <div class="grid ">
                 <div class="AppHeader_Row grid_row">
                     <ul class="AppHeader_List">
-                        <li class="AppHeader_Item">
-                            <a href="" class ="AppHeader_Link" >Bài Tập</a>
+                        <li class="AppHeader_Item AppHeader_Item--active">
+                            <div class="AppHeader_Text">
+                                <a href="" class ="AppHeader_Link" >Bài Tập</a>
+                            </div>
                         </li>
                         <li class="AppHeader_Item">
-                            <a href="" class ="AppHeader_Link" >Thư Viện</a>
+                            <div class="AppHeader_Text">
+                                <a href="" class ="AppHeader_Link" >Thư viện</a>
+                            </div>
                         </li>
                     </ul>
                     <ul class="AppHeader_List">
@@ -51,13 +56,13 @@
                                         <li class="AppHeader_Dropdown_Item">
                                             <a class="AppHeader_Dropdown_Link" href="">
                                                 <i class="AppHeader_Dropdown_Icon far fa-clock"></i>
-                                                Submissions
+                                                Lịch sử nộp bài
                                             </a>
                                         </li>
                                         <li class="AppHeader_Dropdown_Item">
                                             <a class="AppHeader_Dropdown_Link" href="">
                                                 <i class="AppHeader_Dropdown_Icon fas fa-sign-out-alt"></i>
-                                                Sign out
+                                                Đăng xuất
                                             </a>
                                         </li>
                                     </ul>
@@ -68,6 +73,54 @@
                 </div>
             </div>
         </header>
+        <div class="AppBody">
+            <div class="ProblemPage grid">
+                <div class="grid_row">
+                    <div class="grid_column-9">
+                        <h1 class="ProblemPage_Header">Danh Sách Bài Tập</h1>
+                        <table cellspacing="0" cellpadding="0" class="ListProblemTable">
+                            <thead>
+                                <tr>
+                                    <th class = "Number">#</th>
+                                    <th class = "Title">
+                                        Tên Bài
+                                    </th>
+                                    <th class = "Status">
+                                        Trạng Thái
+                                    </th>
+                                    <th class = "Points">
+                                        Độ Khó
+                                    </th>
+                                    <th class = "SuccessRate">
+                                        Tỉ Lệ AC
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr class= "ListProblemRow">
+                                    <td class = "ProblemNumber">123</td>
+                                    <td class = "ProblemTitle">
+                                        <a href= "">Đoạn con tăng dần</a>
+                                    </td>
+                                    <td class = "ProblemStatus">Hoàn thành</td>
+                                    <td class = "ProblemDifficullity">1000</td>
+                                    <td class = "ProblemSuccessRate">95%</td>
+                                    </tr>
+                                    <tr class= "ListProblemRow">
+                                        <td class = "ProblemNumber">123</td>
+                                        <td class = "ProblemTitle">
+                                            <a href= "/ababa">Xâu min</a>
+                                        </td>
+                                        <td class = "ProblemStatus">Hoàn thành</td>
+                                        <td class = "ProblemDifficullity">1000</td>
+                                        <td class = "ProblemSuccessRate">95%</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

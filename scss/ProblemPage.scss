@@ -1,0 +1,36 @@
+@import 'var.scss';
+.ProblemPage
+{
+    padding: 40px 0;
+    .ProblemPage_Header
+    {
+        font-size: 18px;
+        font-weight: normal;
+        margin: 0 0 20px 0;
+    }
+    .ListProblemTable
+    {
+        width: 100%;
+        font-size: 14rem;
+        box-shadow: 0 0 5px $shadow-color;
+        th
+        {
+            padding: 10px;
+            font-weight: 100;
+            border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+        }
+        tr:nth-child(even)
+        {
+            background-color: $light-gray-color;
+        }
+        .Title, .ProblemTitle
+        {
+            text-align: left;
+        }
+        td
+        {
+            padding: 20px 10px;
+            text-align: center;
+        }
+    }
+}
