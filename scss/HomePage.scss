@@ -53,8 +53,9 @@
                     top: 170%;
                     width: 250px;
                     padding: 10px 0;
-                    box-shadow: 0 0 5px #ccc;
+                    box-shadow: 0 0 5px #63636394;
                     border-radius: 5px;
+                    background-color: $white-color;
                     transform: scale(0);
                     transform-origin: 90% 0;
                     transition: all 0.2s ease-in;

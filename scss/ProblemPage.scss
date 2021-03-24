@@ -13,6 +13,7 @@
         width: 100%;
         font-size: 14rem;
         box-shadow: 0 0 5px $shadow-color;
+        background-color: $white-color;
         th
         {
             padding: 10px;
@@ -23,14 +24,80 @@
         {
             background-color: $light-gray-color;
         }
+        .Number, .ProblemNumber
+        {
+            width: 10%;
+        }
         .Title, .ProblemTitle
         {
             text-align: left;
+            width: 50%;
         }
         td
         {
             padding: 20px 10px;
             text-align: center;
+        }
+    }
+}
+.ProblemFilter
+{
+    background-color: $white-color;
+    box-shadow: 0 0 5px #ccc;
+    padding: 10px 15px;
+    margin: 35px 0;
+    font-size: 14rem;
+    line-height: 20rem;
+    .ProblemFillter_Header
+    {
+        font-weight: normal;
+        font-size: 16rem;
+        margin: 10px 0;
+    }
+    .ProblemNameFillter
+    {
+        padding: 10px 0;
+        #ProblemName
+        {
+            width: 100%;
+            padding: 2px 5px;
+        }
+    }
+    .ProblemUnsolvedFillter
+    {
+        padding: 10px 0;
+        #HideSolvedProblem
+        {
+            margin: 0 5px;
+        }
+    }
+    .ProblemCategoryFillter
+    {
+        #ProblemCategory
+        {
+            width: 100%;
+            margin: 10px 0;
+            padding: 2px;
+        }
+    }
+    .ProblemDifficultFillter
+    {
+        padding: 10px 0;
+        #MinDifficult, #MaxDifficult
+        {
+            width: 30%;
+            padding: 2px;
+            margin: 0 5px;
+        }
+    }
+    .ProblemFillterSubmit
+    {
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        #ProblemFillterSubmit_Btn
+        {
+            cursor: pointer;
         }
     }
 }

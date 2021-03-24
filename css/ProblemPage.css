@@ -13,6 +13,7 @@
   font-size: 14rem;
   -webkit-box-shadow: 0 0 5px #ccc;
           box-shadow: 0 0 5px #ccc;
+  background-color: #fff;
 }
 
 .ProblemPage .ListProblemTable th {
@@ -25,12 +26,80 @@
   background-color: #ccc3;
 }
 
+.ProblemPage .ListProblemTable .Number, .ProblemPage .ListProblemTable .ProblemNumber {
+  width: 10%;
+}
+
 .ProblemPage .ListProblemTable .Title, .ProblemPage .ListProblemTable .ProblemTitle {
   text-align: left;
+  width: 50%;
 }
 
 .ProblemPage .ListProblemTable td {
   padding: 20px 10px;
   text-align: center;
+}
+
+.ProblemFilter {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px #ccc;
+          box-shadow: 0 0 5px #ccc;
+  padding: 10px 15px;
+  margin: 35px 0;
+  font-size: 14rem;
+  line-height: 20rem;
+}
+
+.ProblemFilter .ProblemFillter_Header {
+  font-weight: normal;
+  font-size: 16rem;
+  margin: 10px 0;
+}
+
+.ProblemFilter .ProblemNameFillter {
+  padding: 10px 0;
+}
+
+.ProblemFilter .ProblemNameFillter #ProblemName {
+  width: 100%;
+  padding: 2px 5px;
+}
+
+.ProblemFilter .ProblemUnsolvedFillter {
+  padding: 10px 0;
+}
+
+.ProblemFilter .ProblemUnsolvedFillter #HideSolvedProblem {
+  margin: 0 5px;
+}
+
+.ProblemFilter .ProblemCategoryFillter #ProblemCategory {
+  width: 100%;
+  margin: 10px 0;
+  padding: 2px;
+}
+
+.ProblemFilter .ProblemDifficultFillter {
+  padding: 10px 0;
+}
+
+.ProblemFilter .ProblemDifficultFillter #MinDifficult, .ProblemFilter .ProblemDifficultFillter #MaxDifficult {
+  width: 30%;
+  padding: 2px;
+  margin: 0 5px;
+}
+
+.ProblemFilter .ProblemFillterSubmit {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ProblemFilter .ProblemFillterSubmit #ProblemFillterSubmit_Btn {
+  cursor: pointer;
 }
 /*# sourceMappingURL=ProblemPage.css.map */

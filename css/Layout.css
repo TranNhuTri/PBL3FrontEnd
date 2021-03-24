@@ -29,3 +29,9 @@ html
     padding-right: 10px;
     width: 75%;
 }
+.grid_column-3
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 25%;
+}

@@ -17,6 +17,11 @@
             <div class="grid ">
                 <div class="AppHeader_Row grid_row">
                     <ul class="AppHeader_List">
+                        <li class="AppHeader_Item">
+                            <div class="AppHeader_Text">
+                                <a href="" class ="AppHeader_Link" >Trang Chủ</a>
+                            </div>
+                        </li>
                         <li class="AppHeader_Item AppHeader_Item--active">
                             <div class="AppHeader_Text">
                                 <a href="" class ="AppHeader_Link" >Bài Tập</a>
@@ -74,49 +79,101 @@
             </div>
         </header>
         <div class="AppBody">
-            <div class="ProblemPage grid">
-                <div class="grid_row">
-                    <div class="grid_column-9">
-                        <h1 class="ProblemPage_Header">Danh Sách Bài Tập</h1>
-                        <table cellspacing="0" cellpadding="0" class="ListProblemTable">
-                            <thead>
-                                <tr>
-                                    <th class = "Number">#</th>
-                                    <th class = "Title">
-                                        Tên Bài
-                                    </th>
-                                    <th class = "Status">
-                                        Trạng Thái
-                                    </th>
-                                    <th class = "Points">
-                                        Độ Khó
-                                    </th>
-                                    <th class = "SuccessRate">
-                                        Tỉ Lệ AC
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                    <tr class= "ListProblemRow">
-                                    <td class = "ProblemNumber">123</td>
-                                    <td class = "ProblemTitle">
-                                        <a href= "">Đoạn con tăng dần</a>
-                                    </td>
-                                    <td class = "ProblemStatus">Hoàn thành</td>
-                                    <td class = "ProblemDifficullity">1000</td>
-                                    <td class = "ProblemSuccessRate">95%</td>
+            <div class="ProblemPage">
+                <div class="grid">
+                    <div class="grid_row">
+                        <div class="grid_column-9">
+                            <h1 class="ProblemPage_Header">Danh Sách Bài Tập</h1>
+                            <table cellspacing="0" cellpadding="0" class="ListProblemTable">
+                                <thead>
+                                    <tr>
+                                        <th class = "Number">#</th>
+                                        <th class = "Title">
+                                            Tên Bài
+                                        </th>
+                                        <th class = "Status">
+                                            Trạng Thái
+                                        </th>
+                                        <th class = "Points">
+                                            Độ Khó
+                                        </th>
+                                        <th class = "SuccessRate">
+                                            Tỉ Lệ AC
+                                        </th>
                                     </tr>
-                                    <tr class= "ListProblemRow">
+                                </thead>
+                                <tbody>
+                                        <tr class= "ListProblemRow">
                                         <td class = "ProblemNumber">123</td>
                                         <td class = "ProblemTitle">
-                                            <a href= "/ababa">Xâu min</a>
+                                            <a href= "">Đoạn con tăng dần</a>
                                         </td>
                                         <td class = "ProblemStatus">Hoàn thành</td>
                                         <td class = "ProblemDifficullity">1000</td>
                                         <td class = "ProblemSuccessRate">95%</td>
-                                    </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                        <tr class= "ListProblemRow">
+                                            <td class = "ProblemNumber">123</td>
+                                            <td class = "ProblemTitle">
+                                                <a href= "/ababa">Xâu min</a>
+                                            </td>
+                                            <td class = "ProblemStatus">Chưa hoàn thành</td>
+                                            <td class = "ProblemDifficullity">1000</td>
+                                            <td class = "ProblemSuccessRate">95%</td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid_column-3">
+                            <form action="" method="GET">
+                                <div class="ProblemFilter">
+                                    <h1 class="ProblemFillter_Header">Tìm Kiếm Bài Tập</h1>
+                                    <div class="ProblemNameFillter">
+                                        <input type="text" name = "ProblemName" id = "ProblemName" placeholder="Nhập tên bài">
+                                    </div>
+                                    <div class = "ProblemUnsolvedFillter">
+                                        <input type="checkbox" name="HideSolvedProblem" id="HideSolvedProblem">
+                                        <label for="HideSolvedProblem">Ẩn bài đã hoàn thành</label>
+                                    </div>
+                                    <div class="ProblemCategoryFillter">
+                                        <label for="ProblemCategory">Dạng bài</label><br>
+                                        <select id="ProblemCategory" name = "ProblemCategory">
+                                            <option value="" selected disabled hidden>Tất cả</option>
+                                            <option value="">DFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                            <option value="">BFS</option>
+                                        </select>
+                                    </div>
+                                    <div class = "ProblemDifficultFillter">
+                                        <label for="MinDifficult">Độ khó</label>
+                                        <input type="text" name="MinDifficult" id="MinDifficult">
+                                        -
+                                        <input type="text" name="MaxDifficult" id="MaxDifficult">
+                                    </div>
+                                    <div class = "ProblemFillterSubmit">
+                                        <input type="submit" value="Lọc" id = "ProblemFillterSubmit_Btn">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
