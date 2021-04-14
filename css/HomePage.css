@@ -1,5 +1,20 @@
+input {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14rem;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #52a8eccc;
+  -webkit-box-shadow: 0 0 5px #52a8eccc;
+          box-shadow: 0 0 5px #52a8eccc;
+}
+
 .AppHeader {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.4);
 }
 
 .AppHeader .AppHeader_Row {
@@ -18,10 +33,11 @@
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item {
-  padding: 5px 15px;
+  padding: 10px 15px;
   font-size: 16rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,20 +47,51 @@
           align-items: center;
 }
 
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .Login_Link, .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .Register_Link {
+  position: relative;
+  text-decoration: none;
+  color: #008eff;
+}
+
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .Login_Link::before {
+  content: "";
+  height: 20px;
+  width: 1px;
+  background-color: #546e7a;
+  position: absolute;
+  top: -20%;
+  right: -20%;
+}
+
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Text {
-  padding: 5px;
+  padding: 5px 0;
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Text .AppHeader_Link {
   text-decoration: none;
   font-size: 16rem;
-  color: #636363;
+  color: #636363bf;
+  font-weight: 600;
+  display: block;
+}
+
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Logo .AppHeader_Link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Logo .AppHeader_Link img {
+  height: 20rem;
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_BellIcon, .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_AvarIcon {
   position: relative;
   cursor: pointer;
-  color: #636363;
+  color: #636363bf;
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_BellIcon .AppHeader_Dropdown {
@@ -91,7 +138,9 @@
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Dropdown .AppHeader_Dropdown_List .AppHeader_Dropdown_Item .AppHeader_Dropdown_Link {
   text-decoration: none;
-  color: #636363;
+  color: #636363de;
+  width: 100%;
+  display: block;
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Dropdown .AppHeader_Dropdown_List .AppHeader_Dropdown_Item .AppHeader_Dropdown_Link .AppHeader_Dropdown_Icon {
@@ -102,6 +151,7 @@
   font-size: 14px;
   margin: 0;
   padding-left: 10px;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item .AppHeader_Dropdown .AppHeader_Dropdown_List .AppHeader_Dropdown_Item:hover .AppHeader_Dropdown_Link {
@@ -133,8 +183,8 @@
   color: black;
 }
 
-.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item--active .AppHeader_Text {
-  border-bottom: 1px solid #ccc;
+.AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item--active {
+  border-bottom: 2px solid #263238;
 }
 
 .AppHeader .AppHeader_Row .AppHeader_List .AppHeader_Item--active .AppHeader_Text .AppHeader_Link {
@@ -144,5 +194,16 @@
 
 .list_problem_table {
   font-size: 20px;
+}
+
+.AppFooter {
+  text-align: center;
+  font-size: 14rem;
+  border-top: 1px solid #afafaf;
+  padding: 5px 0;
+}
+
+.AppFooter .AppFooter_Link {
+  text-decoration: none;
 }
 /*# sourceMappingURL=HomePage.css.map */

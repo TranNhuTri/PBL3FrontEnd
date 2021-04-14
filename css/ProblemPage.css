@@ -1,105 +1,109 @@
 .ProblemPage {
-  padding: 40px 0;
+  padding: 30px 0;
+  font-size: 18rem;
+  font-family: "Merriweather",serif;
+  line-height: 30rem;
+  background-color: #eeeeee;
 }
 
-.ProblemPage .ProblemPage_Header {
-  font-size: 18px;
-  font-weight: normal;
-  margin: 0 0 20px 0;
-}
-
-.ProblemPage .ListProblemTable {
-  width: 100%;
-  font-size: 14rem;
-  -webkit-box-shadow: 0 0 5px #ccc;
-          box-shadow: 0 0 5px #ccc;
+.ProblemPage .ProblemContent {
+  padding: 20px;
   background-color: #fff;
 }
 
-.ProblemPage .ListProblemTable th {
-  padding: 10px;
-  font-weight: 100;
-  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
-}
-
-.ProblemPage .ListProblemTable tr:nth-child(even) {
-  background-color: #ccc3;
-}
-
-.ProblemPage .ListProblemTable .Number, .ProblemPage .ListProblemTable .ProblemNumber {
-  width: 10%;
-}
-
-.ProblemPage .ListProblemTable .Title, .ProblemPage .ListProblemTable .ProblemTitle {
-  text-align: left;
-  width: 50%;
-}
-
-.ProblemPage .ListProblemTable td {
-  padding: 20px 10px;
-  text-align: center;
-}
-
-.ProblemFilter {
-  background-color: #fff;
-  -webkit-box-shadow: 0 0 5px #ccc;
-          box-shadow: 0 0 5px #ccc;
-  padding: 10px 15px;
-  margin: 35px 0;
-  font-size: 14rem;
-  line-height: 20rem;
-}
-
-.ProblemFilter .ProblemFillter_Header {
+.ProblemPage .ProblemContent .ProblemPageHeader {
+  font-size: 30px;
   font-weight: normal;
-  font-size: 16rem;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
-.ProblemFilter .ProblemNameFillter {
-  padding: 10px 0;
+.ProblemPage .ProblemMenu {
+  font-family: "Arial",serif;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 15px;
 }
 
-.ProblemFilter .ProblemNameFillter #ProblemName {
-  width: 100%;
-  padding: 2px 5px;
-}
-
-.ProblemFilter .ProblemUnsolvedFillter {
-  padding: 10px 0;
-}
-
-.ProblemFilter .ProblemUnsolvedFillter #HideSolvedProblem {
-  margin: 0 5px;
-}
-
-.ProblemFilter .ProblemCategoryFillter #ProblemCategory {
-  width: 100%;
-  margin: 10px 0;
-  padding: 2px;
-}
-
-.ProblemFilter .ProblemDifficultFillter {
-  padding: 10px 0;
-}
-
-.ProblemFilter .ProblemDifficultFillter #MinDifficult, .ProblemFilter .ProblemDifficultFillter #MaxDifficult {
-  width: 30%;
-  padding: 2px;
-  margin: 0 5px;
-}
-
-.ProblemFilter .ProblemFillterSubmit {
-  padding: 10px 0;
+.ProblemPage .ProblemMenu .ProblemMenu_Buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.ProblemFilter .ProblemFillterSubmit #ProblemFillterSubmit_Btn {
-  cursor: pointer;
+.ProblemPage .ProblemMenu .ProblemMenu_Buttons .ProblemMenu_Link {
+  text-decoration: none;
+}
+
+.ProblemPage .ProblemMenu .ProblemMenu_Buttons .ProblemMenu_Link .ProblemSubmitButton, .ProblemPage .ProblemMenu .ProblemMenu_Buttons .ProblemMenu_Link .ProblemStatistictButton {
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  border-radius: 4px;
+  -webkit-transition: all 0.05s ease-in;
+  transition: all 0.05s ease-in;
+}
+
+.ProblemPage .ProblemMenu .ProblemMenu_Buttons .ProblemMenu_Link .ProblemSubmitButton:hover, .ProblemPage .ProblemMenu .ProblemMenu_Buttons .ProblemMenu_Link .ProblemStatistictButton:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.ProblemPage .ProblemMenu .ProblemMenu_Buttons .ProblemMenu_Link .ProblemSubmitButton {
+  background-color: #52bb50;
+  border-bottom: 3px solid #53a152;
+}
+
+.ProblemPage .ProblemMenu .ProblemMenu_Buttons .ProblemMenu_Link .ProblemStatistictButton {
+  background-color: #00b1bc;
+  border-bottom: 3px solid #099ca7;
+}
+
+.ProblemPage .ProblemMenu .ProblemPropertyContainer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.ProblemPage .ProblemMenu .ProblemPropertyContainer .ProblemProperty {
+  margin: 5px 0;
+}
+
+li {
+  font-size: 14rem;
+}
+
+h1 {
+  font-size: 22rem;
+}
+
+h2 {
+  font-size: 20rem;
+}
+
+h3 {
+  font-size: 18rem;
+}
+
+h4 {
+  font-size: 16rem;
+}
+
+.cke_widget_codeSnippet {
+  outline: none;
+}
+
+.cke_widget_codeSnippet .cke_widget_drag_handler_container {
+  display: none;
+}
+
+.cke_widget_mask {
+  display: none;
+}
+
+code {
+  padding: 20px !important;
+  font-size: 16rem;
 }
 /*# sourceMappingURL=ProblemPage.css.map */

@@ -9,7 +9,25 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="stylesheet" href="./css/Layout.css">
     <link rel="stylesheet" href="./css/HomePage.css">
+    <link rel="stylesheet" href="./css/ListProblemsPage.css">
     <link rel="stylesheet" href="./css/ProblemPage.css">
+    <link rel="stylesheet" href="./css/CreateProblemPage.css">
+    <link rel="stylesheet" href="./css/Base.css">
+    <link rel="stylesheet" href="./css/SubmitProblemPage.css">
+    <link rel="stylesheet" href="./css/LoginPage.css">
+    <script src="./ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="./ckeditor/plugins/codesnippet/lib/highlight/styles/default.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="./codemirror-5.60.0/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="./codemirror-5.60.0/lib/codemirror.css">
+    <script src="./codemirror-5.60.0/mode/clike/clike.js"></script>
+    <script src="./codemirror-5.60.0/addon/edit/closebrackets.js"></script>
+
+    <script src = "./codemirror-5.60.0/addon/fold/foldcode.js"></script>
+    <script src = "./codemirror-5.60.0/addon/fold/foldgutter.js"></script>
+    <script src = "./codemirror-5.60.0/addon/fold/brace-fold.js"></script>
+    <link rel="stylesheet" href="./codemirror-5.60.0/addon/fold/foldgutter.css">
 </head>
 <body>
     <div class="AppContainer">
@@ -17,6 +35,11 @@
             <div class="grid ">
                 <div class="AppHeader_Row grid_row">
                     <ul class="AppHeader_List">
+                        <li class="AppHeader_Item">
+                            <div class="AppHeader_Logo">
+                                <a href="" class ="AppHeader_Link" ><img src="./img/favicon.png" alt=""></a>
+                            </div>
+                        </li>
                         <li class="AppHeader_Item">
                             <div class="AppHeader_Text">
                                 <a href="" class ="AppHeader_Link" >Trang Chủ</a>
@@ -34,7 +57,7 @@
                         </li>
                     </ul>
                     <ul class="AppHeader_List">
-                        <li class="AppHeader_Item">
+                        <!-- <li class="AppHeader_Item">
                             <div class="AppHeader_BellIcon">
                                 <i class="fas fa-bell"></i>
                                 <div class="AppHeader_Dropdown">
@@ -73,13 +96,19 @@
                                     </ul>
                                 </div>
                             </div>
+                        </li> -->
+                        <li class="AppHeader_Item">
+                            <a href="" class = "Login_Link">Đăng nhập</a>
+                        </li>
+                        <li class="AppHeader_Item">
+                            <a href="" class = "Register_Link">Đăng ký</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </header>
         <div class="AppBody">
-            <div class="ProblemPage">
+            <!-- <div class="ListProblemsPage">
                 <div class="grid">
                     <div class="grid_row">
                         <div class="grid_column-9">
@@ -176,8 +205,195 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+            <!-- <div class="ProblemPage">
+                <div class="grid">
+                    <div class="grid_row">
+                        <div class="grid_column-9">
+                            <div class="ProblemContent">
+                                <h1 class="ProblemPageHeader">Tìm đồ thất lạc</h1>
+                            <div class="result" id="mathdiv"><p><strong>ami</strong> có <strong>n</strong> món đồ chơi. Món đồ chơi thứ <strong>i</strong> có màu <strong>c[i]</strong>. Hôm nay, khi đem kho đồ chơi ra ngắm thì <strong>ami</strong> phát hiện thấy thiếu mất <strong>m</strong>​​​​​​​ món. Hãy tìm màu sắc của <strong>m</strong> món đồ chơi bị mất đó.</p><h2>Input<br></h2><ul><li>Dòng đầu tiên chứa hai số nguyên <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="302" style="font-size: 101.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-b mjx-i"><mjx-c class="mjx-c1D48F TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b"><mjx-c class="mjx-c2C TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i" space="2"><mjx-c class="mjx-c1D48E TEX-BI"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mo class="mjx-b"><mjx-c class="mjx-c28 TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b"><mjx-c class="mjx-c1D7D1 TEX-B"></mjx-c></mjx-mn><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i" space="4"><mjx-c class="mjx-c1D48F TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mn class="mjx-b"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.382em;"><mjx-mn class="mjx-b" size="s"><mjx-c class="mjx-c1D7D3 TEX-B"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-b"><mjx-c class="mjx-c2C TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b" space="2"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c></mjx-mn><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i" space="4"><mjx-c class="mjx-c1D48E TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b" space="4"><mjx-c class="mjx-c1D7D0 TEX-B"></mjx-c></mjx-mn><mjx-mo class="mjx-b"><mjx-c class="mjx-c29 TEX-B"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold-italic">n</mi><mo mathvariant="bold">,</mo><mi mathvariant="bold-italic">m</mi><mtext>&nbsp;</mtext><mo stretchy="false" mathvariant="bold">(</mo><mn mathvariant="bold">3</mn><mo mathvariant="bold">≤</mo><mi mathvariant="bold-italic">n</mi><mo mathvariant="bold">≤</mo><msup><mn mathvariant="bold">10</mn><mn mathvariant="bold">5</mn></msup><mo mathvariant="bold">,</mo><mn mathvariant="bold">1</mn><mo mathvariant="bold">≤</mo><mi mathvariant="bold-italic">m</mi><mo mathvariant="bold">≤</mo><mn mathvariant="bold">2</mn><mo stretchy="false" mathvariant="bold">)</mo></math></mjx-assistive-mml></mjx-container>.</li><li>Dòng thứ hai chứa <strong>n</strong>số nguyên dương <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="303" style="font-size: 101.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-b mjx-i"><mjx-c class="mjx-c1D484 TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b"><mjx-c class="mjx-c5B TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i"><mjx-c class="mjx-c1D48A TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b"><mjx-c class="mjx-c5D TEX-B"></mjx-c></mjx-mo><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mo class="mjx-b"><mjx-c class="mjx-c28 TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c></mjx-mn><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i" space="4"><mjx-c class="mjx-c1D484 TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b"><mjx-c class="mjx-c5B TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i"><mjx-c class="mjx-c1D48A TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b"><mjx-c class="mjx-c5D TEX-B"></mjx-c></mjx-mo><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mn class="mjx-b"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.382em;"><mjx-mn class="mjx-b" size="s"><mjx-c class="mjx-c1D7D3 TEX-B"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-b"><mjx-c class="mjx-c29 TEX-B"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold-italic">c</mi><mo stretchy="false" mathvariant="bold">[</mo><mi mathvariant="bold-italic">i</mi><mo stretchy="false" mathvariant="bold">]</mo><mtext>&nbsp;</mtext><mo stretchy="false" mathvariant="bold">(</mo><mn mathvariant="bold">1</mn><mo mathvariant="bold">≤</mo><mi mathvariant="bold-italic">c</mi><mo stretchy="false" mathvariant="bold">[</mo><mi mathvariant="bold-italic">i</mi><mo stretchy="false" mathvariant="bold">]</mo><mo mathvariant="bold">≤</mo><msup><mn mathvariant="bold">10</mn><mn mathvariant="bold">5</mn></msup><mo stretchy="false" mathvariant="bold">)</mo></math></mjx-assistive-mml></mjx-container>. Lưu ý, có thể có nhiều món đồ chơi có cùng màu</li><li>Dòng thứ ba chứa <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="304" style="font-size: 101.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-b"><mjx-c class="mjx-c28 TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i"><mjx-c class="mjx-c1D48F TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="3"><mjx-c class="mjx-c2212 TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i" space="3"><mjx-c class="mjx-c1D48E TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b"><mjx-c class="mjx-c29 TEX-B"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" mathvariant="bold">(</mo><mi mathvariant="bold-italic">n</mi><mo mathvariant="bold">−</mo><mi mathvariant="bold-italic">m</mi><mo stretchy="false" mathvariant="bold">)</mo></math></mjx-assistive-mml></mjx-container>số nguyên dương, là màu của các món đồ không bị mất.</li></ul><h2>Output<br></h2><p>In ra <strong>m </strong>số nguyên theo thứ tự tăng dần, là màu các món đồ chơi bị mất.</p><h2>Ví dụ<br></h2><h3>Sample Input 1<br></h3><div tabindex="-1" contenteditable="false" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_block cke_widget_codeSnippet" data-cke-display-name="code snippet" data-cke-widget-id="11" role="region" aria-label="code snippet widget"><pre data-cke-widget-keep-attr="0" data-widget="codeSnippet" class="cke_widget_element" data-cke-widget-data="%7B%22classes%22%3Anull%2C%22lang%22%3A%22%22%2C%22code%22%3A%223%201%5Cn1%203%202%5Cn1%202%22%7D"><code class="hljs">3 1
+1 3 2
+1 2</code></pre><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" class="cke_reset cke_widget_mask"><span class="cke_reset cke_widget_drag_handler_container" style="background: url(&quot;http://127.0.0.1:5501/ckeditor/plugins/widget/images/handle.png&quot;) rgba(220, 220, 220, 0.5); top: -15px; left: 0px;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" width="15" title="Click and drag to move" height="15" role="presentation"></span></div><h3>Sample Output 1<br></h3><div tabindex="-1" contenteditable="false" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_block cke_widget_codeSnippet" data-cke-display-name="code snippet" data-cke-widget-id="10" role="region" aria-label="code snippet widget"><pre data-cke-widget-keep-attr="0" data-widget="codeSnippet" class="cke_widget_element" data-cke-widget-data="%7B%22classes%22%3Anull%2C%22lang%22%3A%22%22%2C%22code%22%3A%223%22%7D"><code class="hljs">3</code></pre><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" class="cke_reset cke_widget_mask"><span class="cke_reset cke_widget_drag_handler_container" style="background: url(&quot;http://127.0.0.1:5501/ckeditor/plugins/widget/images/handle.png&quot;) rgba(220, 220, 220, 0.5); top: -15px; left: 0px;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" width="15" title="Click and drag to move" height="15" role="presentation"></span></div><h3>Sample Input 2<br></h3><div tabindex="-1" contenteditable="false" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_block cke_widget_codeSnippet" data-cke-display-name="code snippet" data-cke-widget-id="9" role="region" aria-label="code snippet widget"><pre data-cke-widget-keep-attr="0" data-widget="codeSnippet" class="cke_widget_element" data-cke-widget-data="%7B%22classes%22%3Anull%2C%22lang%22%3A%22%22%2C%22code%22%3A%224%202%5Cn2%202%202%204%5Cn2%204%22%7D"><code class="hljs">4 2
+2 2 2 4
+2 4</code></pre><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" class="cke_reset cke_widget_mask"><span class="cke_reset cke_widget_drag_handler_container" style="background: url(&quot;http://127.0.0.1:5501/ckeditor/plugins/widget/images/handle.png&quot;) rgba(220, 220, 220, 0.5); top: -15px; left: 0px;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" width="15" title="Click and drag to move" height="15" role="presentation"></span></div><h3>Sample Output 2</h3><div tabindex="-1" contenteditable="false" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_block cke_widget_codeSnippet" data-cke-display-name="code snippet" data-cke-widget-id="8" role="region" aria-label="code snippet widget"><pre data-cke-widget-keep-attr="0" data-widget="codeSnippet" class="cke_widget_element" data-cke-widget-data="%7B%22classes%22%3Anull%2C%22lang%22%3A%22%22%2C%22code%22%3A%22%202%202%22%7D"><code class="hljs"> 2 2</code></pre><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" class="cke_reset cke_widget_mask"><span class="cke_reset cke_widget_drag_handler_container" style="background: url(&quot;http://127.0.0.1:5501/ckeditor/plugins/widget/images/handle.png&quot;) rgba(220, 220, 220, 0.5); top: -15px; left: 0px;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" width="15" title="Click and drag to move" height="15" role="presentation"></span></div><h3>Sample Input 3</h3><div tabindex="-1" contenteditable="false" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_block cke_widget_codeSnippet" data-cke-display-name="code snippet" data-cke-widget-id="7" role="region" aria-label="code snippet widget"><pre data-cke-widget-keep-attr="0" data-widget="codeSnippet" class="cke_widget_element" data-cke-widget-data="%7B%22classes%22%3Anull%2C%22lang%22%3A%22%22%2C%22code%22%3A%223%202%5Cn1%202%203%5Cn2%22%7D"><code class="hljs">3 2
+1 2 3
+2</code></pre><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" class="cke_reset cke_widget_mask"><span class="cke_reset cke_widget_drag_handler_container" style="background: url(&quot;http://127.0.0.1:5501/ckeditor/plugins/widget/images/handle.png&quot;) rgba(220, 220, 220, 0.5); top: -15px; left: 0px;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" width="15" title="Click and drag to move" height="15" role="presentation"></span></div><h3>Sample Output 3</h3><div tabindex="-1" contenteditable="false" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_block cke_widget_codeSnippet" data-cke-display-name="code snippet" data-cke-widget-id="6" role="region" aria-label="code snippet widget"><pre data-cke-widget-keep-attr="0" data-widget="codeSnippet" class="cke_widget_element" data-cke-widget-data="%7B%22classes%22%3Anull%2C%22lang%22%3A%22%22%2C%22code%22%3A%221%203%22%7D"><code class="hljs">1 3</code></pre><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" class="cke_reset cke_widget_mask"><span class="cke_reset cke_widget_drag_handler_container" style="background: url(&quot;http://127.0.0.1:5501/ckeditor/plugins/widget/images/handle.png&quot;) rgba(220, 220, 220, 0.5); top: -15px; left: 0px;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" width="15" title="Click and drag to move" height="15" role="presentation"></span></div><h2>Giải thích<br></h2><ul><li>Trong test ví dụ 1, [user:ami] có 3 món đồ chơi có màu là 1, 2, 3. [user:ami] đã tìm được các món 1 và 2. Vì vậy món thất lạc có màu là 3.</li></ul><h2>Giới hạn<br></h2><ul><li>Có <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="305" style="font-size: 101.3%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c35"></mjx-c></mjx-mn><mjx-mi class="mjx-n"><mjx-c class="mjx-c25"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>25</mn><mi mathvariant="normal">%</mi></math></mjx-assistive-mml></mjx-container> điểm tương ứng với <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="306" style="font-size: 101.3%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-b mjx-i"><mjx-c class="mjx-c1D48F TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b" space="4"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c></mjx-mn><mjx-mo class="mjx-b"><mjx-c class="mjx-c2C TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i" space="2"><mjx-c class="mjx-c1D48E TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c3D TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b" space="4"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold-italic">n</mi><mo mathvariant="bold">≤</mo><mn mathvariant="bold">100</mn><mo mathvariant="bold">,</mo><mi mathvariant="bold-italic">m</mi><mo mathvariant="bold">=</mo><mn mathvariant="bold">1</mn></math></mjx-assistive-mml></mjx-container></li><li>Có <strong></strong><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="307" style="font-size: 101.3%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c35"></mjx-c></mjx-mn><mjx-mi class="mjx-n"><mjx-c class="mjx-c25"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>25</mn><mi mathvariant="normal">%</mi></math></mjx-assistive-mml></mjx-container> điểm tương ứng với <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="308" style="font-size: 101.3%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-b mjx-i"><mjx-c class="mjx-c1D48F TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mn class="mjx-b"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.382em;"><mjx-mn class="mjx-b" size="s"><mjx-c class="mjx-c1D7D3 TEX-B"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-b"><mjx-c class="mjx-c2C TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i" space="2"><mjx-c class="mjx-c1D48E TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c3D TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b" space="4"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold-italic">n</mi><mo mathvariant="bold">≤</mo><msup><mn mathvariant="bold">10</mn><mn mathvariant="bold">5</mn></msup><mo mathvariant="bold">,</mo><mi mathvariant="bold-italic">m</mi><mo mathvariant="bold">=</mo><mn mathvariant="bold">1</mn></math></mjx-assistive-mml></mjx-container></li><li>Có <strong></strong><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="309" style="font-size: 101.3%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c35"></mjx-c></mjx-mn><mjx-mi class="mjx-n"><mjx-c class="mjx-c25"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>25</mn><mi mathvariant="normal">%</mi></math></mjx-assistive-mml></mjx-container><strong> </strong>điểm tương ứng với <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="310" style="font-size: 101.3%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-b mjx-i"><mjx-c class="mjx-c1D48F TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b" space="4"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c></mjx-mn><mjx-mo class="mjx-b"><mjx-c class="mjx-c2C TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i" space="2"><mjx-c class="mjx-c1D48E TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c3D TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b" space="4"><mjx-c class="mjx-c1D7D0 TEX-B"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold-italic">n</mi><mo mathvariant="bold">≤</mo><mn mathvariant="bold">100</mn><mo mathvariant="bold">,</mo><mi mathvariant="bold-italic">m</mi><mo mathvariant="bold">=</mo><mn mathvariant="bold">2</mn></math></mjx-assistive-mml></mjx-container></li><li>Có <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="311" style="font-size: 101.3%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c35"></mjx-c></mjx-mn><mjx-mi class="mjx-n"><mjx-c class="mjx-c25"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>25</mn><mi mathvariant="normal">%</mi></math></mjx-assistive-mml></mjx-container> điểm tương ứng với <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" role="presentation" tabindex="0" ctxtmenu_counter="312" style="font-size: 101.3%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-b mjx-i"><mjx-c class="mjx-c1D48F TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c2264 TEX-B"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mn class="mjx-b"><mjx-c class="mjx-c1D7CF TEX-B"></mjx-c><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.382em;"><mjx-mn class="mjx-b" size="s"><mjx-c class="mjx-c1D7D3 TEX-B"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-b"><mjx-c class="mjx-c2C TEX-B"></mjx-c></mjx-mo><mjx-mi class="mjx-b mjx-i" space="2"><mjx-c class="mjx-c1D48E TEX-BI"></mjx-c></mjx-mi><mjx-mo class="mjx-b" space="4"><mjx-c class="mjx-c3D TEX-B"></mjx-c></mjx-mo><mjx-mn class="mjx-b" space="4"><mjx-c class="mjx-c1D7D0 TEX-B"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml role="presentation" unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold-italic">n</mi><mo mathvariant="bold">≤</mo><msup><mn mathvariant="bold">10</mn><mn mathvariant="bold">5</mn></msup><mo mathvariant="bold">,</mo><mi mathvariant="bold-italic">m</mi><mo mathvariant="bold">=</mo><mn mathvariant="bold">2</mn></math></mjx-assistive-mml></mjx-container></li></ul></div>
+                            </div>
+                        </div>
+                        <div class="grid_column-3">
+                            <div class="ProblemMenu">
+                                <div class="ProblemMenu_Buttons">
+                                    <a href="" class = "ProblemMenu_Link">
+                                        <div class="ProblemSubmitButton button">
+                                            Nộp bài
+                                        </div>
+                                    </a>
+                                    <a href="" class = "ProblemMenu_Link">
+                                        <div class="ProblemStatistictButton button">
+                                            Thống kê
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="ProblemPropertyContainer">
+                                    <p class = "ProblemProperty"><b>Problem ID: </b></p>
+                                    <p class = "ProblemProperty"><b>CPU Time limit: </b></p>
+                                    <p class = "ProblemProperty"><b>Memory limit: </b></p>
+                                    <p class = "ProblemProperty"><b>Difficulty: </b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="CreateProblemPage">
+                <div class="grid">
+                    <div class="grid_row">
+                        <div class="grid_column">
+                            <div class="CreateProblemPage_Input">
+                                <h1 class="CreateProblemPage_Header">Tạo bài mới</h1>
+                                <form action="">
+                                    <div class="FormGroup">
+                                        <label for="ID">Mã bài</label>
+                                        <input type="text" name="ID" id="ID">
+                                    </div>
+                                    <div class="FormGroup">
+                                        <label for="Tilte">Tên bài</label>
+                                        <input type="text" name="Tilte" id="Title">
+                                    </div>
+                                    <div class="FormGroup">
+                                        <label>Đề bài</label>
+                                        <div class="Editor">
+                                            <textarea name="Content" id="editor" rows="10" cols="80">
+                                            </textarea>
+                                        </div>
+                                        <div class="Preview">
+                                            <div class="PreviewButton" id = "PreviewButton">
+                                                Update Preview
+                                            </div>
+                                            <div class="PreviewContent">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="FormGroup">
+                                        <label for="Difficulity">Độ khó</label>
+                                        <input type="text" name="Difficulity" id="Difficulity">
+                                    </div>
+                                    <div class="FormSubmit">
+                                        <input type="submit" value = "Submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="SubmitProblemPage">
+                <div class="grid">
+                    <div class="grid_row">
+                        <div class="grid_column">
+                            <div class="SubmitProblemForm">
+                                <h1 class = "SubmitProblemPage_Header">Nộp bài </h1>
+                                <textarea name="ProblemSolution" id="codemirror" cols="30" rows="10" class = "ProblemSolution"></textarea>
+                                <div class="SubmitProblem_Inputs">
+                                    <div class="LanguageSubmit">
+                                        <label for="LanguageSubmit">Language: </label>
+                                        <select name="Language" id="LanguageSubmit">
+                                            <option value="C++">C++</option>
+                                            <option value="Python">Python</option>
+                                            <option value="C#">C#</option>
+                                            <option value="Java">Java</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit" id = "Submit" value="Nộp bài">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="LoginPage">
+                <div class="grid">
+                    <div class="grid_row">
+                        <div class="grid_column">
+                            <div class="Login">
+                                <h2 class="Login_Title">Đăng nhập</h2>
+                                <p class="Login_Disc">CodeTop1 là trang web học thuật toán miễn phí. Đăng nhập để cùng nhau học tập, đóng góp và chia sẻ kiến thức ❤️</p>
+                                <div class="button LoginButton">
+                                        <img class="LoginButton_Icon" src="data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EShape%3C/title%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M17.64 9.205c0-.639-.057-1.252-.164-1.841H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z' fill='%234285F4'/%3E%3Cpath d='M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z' fill='%2334A853'/%3E%3Cpath d='M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z' fill='%23FBBC05'/%3E%3Cpath d='M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z' fill='%23EA4335'/%3E%3Cpath d='M0 0h18v18H0z'/%3E%3C/g%3E%3C/svg%3E">
+                                        <p class = "LoginButton_Text">Đăng nhập với Google</p>
+                                </div>
+                                <div class="button LoginButton">
+                                        <img class="LoginButton_Icon" src="./img/fb-logo.png">
+                                        <p class = "LoginButton_Text">Đăng nhập với Facebook</p>
+                                </div>
+                                <div class="OR">
+                                    <span class = "OR_Text">HOẶC</span>
+                                </div>
+                                <form action="/" method="POST">
+                                    <div class="Login_Input">
+                                        <label for="email" class="Login_Input_Title">
+                                            Tên tài khoản / Email
+                                        </label>
+                                        <input type="input" name="email" id = "email" placeholder="VD:tranhutri@codetop1.com">
+                                    </div>
+                                    <div class="Login_Input">
+                                        <label for="password" class="Login_Input_Title">
+                                            Mật khẩu
+                                        </label>
+                                        <input type="password" name="password" id = "password" placeholder="Nhập mật khẩu">
+                                    </div>
+                                    <input type="submit" id = "LoginSubmitButton" value="Đăng nhập">
+                                </form>
+                                <a class="ForgotPass"href="">Quên mật khẩu ?</a>
+                                <div >
+                                    <p class="Question">Bạn chưa có tài khoản?</p>
+                                    <a class="Register" href="">Đăng kí trải nghiệm ngay!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <footer>
+            <div class="grid">
+                <div class="grid_row">
+                    <div class="grid_column">
+                        <div class="AppFooter">
+                            <p><a href="/" class="AppFooter_Link">CodeTop1</a> (c) Based on DOMjudge 5.1.3</p>
+                            <p>Developed by Tran Nhu Tri - Phan Dinh Khoi - Le Huynh Nhat Long - Do Tan Truong Sanh</p>
+                            <p>University of Science and Technology - University of Danang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+    <!-- <script>
+        CKEDITOR.replace( 'editor');
+    </script> -->
+    <script>
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+          TeX: {
+                Macros: {
+                RR: "{\\bf R}",
+                bold: ["{\\bf #1}",1]
+                }
+            }
+        });
+        var codemirror = CodeMirror.fromTextArea(document.getElementById("codemirror"),
+        {
+            mode: "text/x-csrc",
+            lineNumbers: true,
+            lineWrapping: true,
+            autocapitalize: true,
+            autoCloseBrackets: true,
+            foldGutter: true,
+            gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+        })
+    </script>
+    <script src="./main.js"></script>
 </body>
 </html>

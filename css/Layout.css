@@ -23,6 +23,12 @@ html
     margin-left: -10px;
     margin-right: -10px;
 }
+.grid_column
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
 .grid_column-9
 {
     padding-left: 10px;

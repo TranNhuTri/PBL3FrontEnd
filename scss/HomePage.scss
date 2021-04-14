@@ -1,7 +1,21 @@
 @import 'var.scss';
+input 
+{
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14rem;
+}
+input:focus
+{
+    outline: none;
+    border: 1px solid #52a8eccc;
+    box-shadow: 0 0 5px #52a8eccc;
+}
 .AppHeader
 {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.4);
     .AppHeader_Row
     {
         padding: 0 10px;
@@ -12,20 +26,51 @@
             display: flex;
             list-style: none;
             padding: 0;
+            margin: 0;
             .AppHeader_Item
             {
-                padding: 5px 15px;
+                padding: 10px 15px;
                 font-size: 16rem;
                 display: flex;
                 align-items: center;
+                .Login_Link, .Register_Link
+                {
+                    position: relative;
+                    text-decoration: none;
+                    color: #008eff;
+                }
+                .Login_Link::before
+                {
+                    content: "";
+                    height: 20px;
+                    width: 1px;
+                    background-color: $gray-text-color;
+                    position: absolute;
+                    top: -20%;
+                    right: -20%;
+                }
                 .AppHeader_Text
                 {
-                    padding: 5px;
+                    padding: 5px 0;
                     .AppHeader_Link
                     {
                         text-decoration: none;
                         font-size: 16rem;
                         color: $light-text-color;
+                        font-weight: 600;
+                        display: block;
+                    }
+                }
+                .AppHeader_Logo
+                {
+                    .AppHeader_Link
+                    {
+                        display: flex;
+                        align-items: center;
+                        img 
+                        {
+                            height: 20rem;
+                        }
                     }
                 }
                 .AppHeader_BellIcon, .AppHeader_AvarIcon
@@ -70,7 +115,9 @@
                             .AppHeader_Dropdown_Link
                             {
                                 text-decoration: none;
-                                color: $light-text-color;
+                                color: #636363de;
+                                width: 100%;
+                                display: block;
                                 .AppHeader_Dropdown_Icon
                                 {
                                     padding: 0 10px;
@@ -80,6 +127,7 @@
                                     font-size: 14px;
                                     margin: 0;
                                     padding-left: 10px;
+                                    color: rgba(0, 0, 0, 0.7);
                                 }
                             }
                         }
@@ -115,9 +163,12 @@
             {
                 color: black;
             }
+            .AppHeader_Item--active
+            {
+                border-bottom: 2px solid $dark-color;
+            }
             .AppHeader_Item--active .AppHeader_Text
             {
-                border-bottom: 1px solid #ccc;
                 .AppHeader_Link
                 {
                     cursor: default;
@@ -130,4 +181,15 @@
 .list_problem_table
 {
     font-size: 20px;
+}
+.AppFooter
+{
+    text-align: center;
+    font-size: 14rem;
+    border-top: 1px solid $border-color;
+    padding: 5px 0;
+    .AppFooter_Link
+    {
+        text-decoration: none;
+    }
 }
